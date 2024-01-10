@@ -79,7 +79,6 @@ function App() {
         const action = addTodolistAC(title);
         dispatch(action);
     }, [dispatch]);
-
     return (
         <div className="App">
             <AppBar position="static">
