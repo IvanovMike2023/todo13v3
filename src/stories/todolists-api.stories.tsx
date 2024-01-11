@@ -45,6 +45,10 @@ export const DeleteTodolist = () => {
 export const UpdateTodolistTitle = () => {
     const [state, setState] = useState<any>(null)
     useEffect(() => {
+        const todolistId= '8cf49def-928b-41c0-8105-a61b9df4c8d4'
+        const title = 'NewReact v'
+        const promise = axios.put(`${baseURL}/todo-lists/${todolistId}`, {title},config)
+            .then((res)=>setState(res.data))
     }, [])
 
     return <div>{JSON.stringify(state)}</div>
